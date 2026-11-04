@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CitySmile · Service</title>
+<meta name="description" content="Learn about this treatment at CitySmile Dental Practice, Hackney.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/css/flag-icons.min.css">
+<link rel="stylesheet" href="../assets/styles.css">
+<style>
+  .sd-crumb{font-size:14px;color:var(--ink-65)}
+  .sd-crumb a{color:var(--ink-65);text-decoration:none}
+  .sd-crumb a:hover{color:var(--navy)}
+  .sd-hero{display:flex;flex-wrap:wrap;gap:40px 48px;align-items:center;padding-top:28px}
+  .sd-hero .copy{flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:20px}
+  .sd-num{font-size:14px;color:var(--ink-60)}
+  #sd-name{margin:0;font-weight:500;font-size:clamp(40px,6vw,64px);line-height:1;letter-spacing:-.035em}
+  #sd-lead{margin:0;font-size:18px;line-height:1.5;color:var(--ink-80);max-width:520px}
+  .sd-actions{display:flex;flex-wrap:wrap;gap:12px}
+  .sd-media{flex:1 1 420px;min-width:0}
+  .sd-media img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-lg);display:block;background:var(--bg-blue)}
+  .sd-body-wrap{display:flex;flex-wrap:wrap;gap:40px 48px;padding:8px 0 8px}
+  .sd-text{flex:1 1 480px;min-width:0}
+  .sd-text h2{margin:0 0 12px;font-weight:500;font-size:26px;letter-spacing:-.02em}
+  #sd-body p{margin:0 0 16px;font-size:16px;line-height:1.65;color:var(--ink-80)}
+  .sd-aside{flex:1 1 320px;min-width:0;background:var(--bg-blue);border-radius:var(--radius);padding:28px;align-self:flex-start}
+  .sd-aside h3{margin:0 0 14px;font-size:14px;font-weight:600;color:var(--ink-70);text-transform:uppercase;letter-spacing:.04em}
+  #sd-points{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+  #sd-points li{position:relative;padding-left:30px;font-size:15px;line-height:1.5;color:var(--navy)}
+  #sd-points li::before{content:"";position:absolute;left:0;top:2px;width:20px;height:20px;border-radius:999px;background:var(--mint-tint);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2300A79D' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+  .sd-related-sect h2{margin:0 0 20px;font-weight:500;font-size:28px;letter-spacing:-.02em}
+  #sd-related{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+  .sd-rel{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:10px;text-decoration:none;color:var(--navy)}
+  .sd-rel:hover{color:var(--navy);box-shadow:var(--shadow)}
+  .sd-rel img{width:56px;height:56px;flex:none;object-fit:cover;border-radius:10px;background:var(--bg-blue)}
+  .sd-rel span{font-size:17px;font-weight:500;letter-spacing:-.01em;line-height:1.1}
+  .sd-cta{position:relative;border-radius:var(--radius-lg);overflow:hidden;background:var(--navy);color:#fff;padding:48px;display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between}
+  .sd-cta h2{margin:0;font-weight:500;font-size:clamp(28px,4vw,40px);letter-spacing:-.03em;line-height:1.05}
+  .sd-cta .serif{color:#4FC8F3}
+</style>
+</head>
+<body data-img-base="../images">
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="wrap">
+      <span data-i18n="topbar.hours">Weekdays 08:00 – 19:00 · Saturdays 09:30 – 15:00</span>
+      <div class="lang-switch" aria-label="Language"></div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <header class="nav">
+    <div class="wrap">
+      <a href="index.html" class="logo"><b>CITY</b>SMILE</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B3990" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+      </button>
+      <nav class="nav-links" aria-label="Main">
+        <a href="index.html#services" data-i18n="nav.allServices">All services</a>
+        <a href="index.html#team" data-i18n="nav.team">Team</a>
+        <a href="index.html#visit" data-i18n="nav.visit">Visit</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="tel:+442077394275" class="nav-phone">020 7739 4275</a>
+        <a href="tel:+442077394275" class="btn btn-primary" data-i18n="nav.makeCta">( Make an Appointment )</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="service-detail" class="wrap" style="padding-top:28px;padding-bottom:72px">
+    <p class="sd-crumb"><a href="index.html" data-i18n="sd.home">Home</a> · <a href="index.html#services" data-i18n="sd.services">Services</a></p>
+
+    <section class="sd-hero">
+      <div class="copy">
+        <span class="sd-num" id="sd-num">( 01 )</span>
+        <h1 id="sd-name">Service</h1>
+        <p id="sd-lead"></p>
+        <div class="sd-actions">
+          <a href="tel:+442077394275" class="btn btn-pink" data-i18n="visit.makeAppt">( Make an Appointment )</a>
+          <a href="contact.html" class="btn btn-ghost" data-i18n="sd.askQuestion">( Ask a Question )</a>
+        </div>
+      </div>
+      <div class="sd-media"><img id="sd-img" src="" alt=""></div>
+    </section>
+
+    <section class="sd-body-wrap">
+      <div class="sd-text">
+        <h2 data-i18n="sd.what">What it is</h2>
+        <div id="sd-body"></div>
+      </div>
+      <aside class="sd-aside">
+        <h3 data-i18n="sd.expect">What to expect</h3>
+        <ul id="sd-points"></ul>
+      </aside>
+    </section>
+
+    <section class="sd-related-sect" style="padding-top:24px">
+      <h2 data-i18n="sd.other">Other treatments</h2>
+      <div id="sd-related"></div>
+    </section>
+
+    <section style="padding-top:40px">
+      <div class="sd-cta">
+        <h2><span data-i18n="sd.ctaReadyCall">Ready when you are.</span><br><span class="serif" data-i18n="sd.ctaReadyCall2">Call us today.</span></h2>
+        <a href="tel:+442077394275" class="btn btn-pink" data-i18n="visit.makeAppt">( Make an Appointment )</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-brand">
+        <span class="foot-logo"><b>CITY</b>SMILE</span>
+        <small data-i18n="foot.tagline">Dental practice in Hackney since 1999.</small>
+      </div>
+      <div class="foot-col">
+        <span class="label" data-i18n="foot.menu">Menu</span>
+        <a href="index.html#about" data-i18n="nav.about">About</a>
+        <a href="index.html#services" data-i18n="nav.services">Services</a>
+        <a href="index.html#team" data-i18n="nav.team">Team</a>
+        <a href="index.html#visit" data-i18n="nav.visit">Visit</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <span class="label" data-i18n="foot.contact">Contact</span>
+        <span>37–39 Mare Street<br>Hackney, London E8 4RP</span>
+        <a href="tel:+442077394275">020 7739 4275</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="wrap">
+        <span data-i18n="foot.gdc">All clinicians registered with the General Dental Council.</span>
+        <span data-i18n="foot.legal">Privacy · Cookies · Complaints policy</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/i18n.js"></script>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

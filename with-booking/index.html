@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CitySmile — Dental Practice in Hackney since 1999</title>
+<title>CitySmile Dental Practice in Hackney since 1999</title>
 <meta name="description" content="General, cosmetic and implant dentistry on Mare Street, Hackney. A multilingual team since 1999. Book online in under a minute.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/css/flag-icons.min.css">
 <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body data-img-base="../images" data-mode="book" class="has-bookbar">
@@ -15,8 +16,8 @@
   <!-- Top bar -->
   <div class="topbar">
     <div class="wrap">
-      <span>Open today 08:00 – 19:00 · Saturdays 09:30 – 15:00</span>
-      <span>English · Deutsch · Français · Ελληνικά · Русский</span>
+      <span data-i18n="topbar.hours">Weekdays 08:00 – 19:00 · Saturdays 09:30 – 15:00</span>
+      <div class="lang-switch" aria-label="Language"></div>
     </div>
   </div>
 
@@ -28,15 +29,16 @@
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B3990" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
       </button>
       <nav class="nav-links" aria-label="Main">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#why">Why us</a>
-        <a href="#team">Team</a>
-        <a href="#visit">Visit</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#why" data-i18n="nav.why">Why us</a>
+        <a href="#team" data-i18n="nav.team">Team</a>
+        <a href="#visit" data-i18n="nav.visit">Visit</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="nav-cta">
         <a href="tel:+442077394275" class="nav-phone">020 7739 4275</a>
-        <a href="booking.html" class="btn btn-primary">( Book an Appointment )</a>
+        <a href="booking.html" class="btn btn-primary" data-i18n="nav.bookCta">( Book an Appointment )</a>
       </div>
     </div>
   </header>
@@ -44,20 +46,20 @@
   <!-- Hero -->
   <section id="top" class="wrap hero">
     <div class="hero-top">
-      <h1 class="hero-title">Hackney’s Smile,<br>Cared For <span class="serif" style="color:var(--sky-safe)">Since 1999</span></h1>
+      <h1 class="hero-title" data-i18n-html="headings.hero">Hackney’s Smile,<br>Cared For <span class="serif" style="color:var(--sky-safe)">Since 1999</span></h1>
       <div class="hero-aside">
-        <p>General, cosmetic and implant dentistry on Mare Street — from a multilingual team, five minutes from the City.</p>
+        <p data-i18n="hero.intro">General, cosmetic and implant dentistry on Mare Street, from a multilingual team, five minutes from the City.</p>
         <div class="hero-actions">
-          <a href="booking.html" class="btn btn-pink">( Book Online )</a>
-          <a href="tel:+442077394275" class="btn btn-ghost">( Call Us )</a>
+          <a href="booking.html" class="btn btn-pink" data-i18n="hero.bookOnline">( Book Online )</a>
+          <a href="tel:+442077394275" class="btn btn-ghost" data-i18n="hero.callUs">( Call Us )</a>
         </div>
       </div>
     </div>
     <div class="hero-media">
-      <img src="../images/hd-l11301132.jpg" alt="The CitySmile nursing team in the practice">
+      <img src="../images/hero.jpg" alt="A happy patient with a healthy, confident smile" style="object-position:center 24%;transform:scale(1.08)">
       <div class="chip">
         <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00A79D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>
-        <span style="display:flex;flex-direction:column;gap:2px"><strong>Next appointment: today, 16:00</strong><small>Book online in under a minute</small></span>
+        <span style="display:flex;flex-direction:column;gap:2px"><strong data-i18n="hero.chipBookTitle">Next appointment: today, 16:00</strong><small data-i18n="hero.chipBookSub">Book online in under a minute</small></span>
       </div>
     </div>
   </section>
@@ -66,12 +68,13 @@
   <section id="about" class="sect about">
     <div class="wrap">
       <div class="about-copy">
-        <span class="label">• About</span>
-        <h2 class="h-lg">We combine years of international experience with modern technology, <span class="dim">so every treatment feels gentle, personal and unhurried — in five languages.</span></h2>
+        <span class="label" data-i18n="about.label">• About</span>
+        <h2 class="h-lg" data-i18n-html="headings.about">We combine years of international experience with modern technology, <span class="dim">so every treatment feels gentle, personal and unhurried</span></h2>
+        <p style="margin:0;font-size:16px;line-height:1.6;color:var(--ink-80);max-width:540px" data-i18n="about.para">We specialise in creating beautiful, healthy smiles and provide individualised, gentle smile rejuvenation in a relaxed and friendly environment. Our dentists speak German, French, Greek and Russian.</p>
         <div class="stats">
-          <div class="stat"><div class="num">25+</div><div class="cap">years in Hackney</div></div>
-          <div class="stat"><div class="num">16</div><div class="cap">people in the team</div></div>
-          <div class="stat"><div class="num">6</div><div class="cap">days a week</div></div>
+          <div class="stat"><div class="num">25+</div><div class="cap" data-i18n="about.stat1">years in Hackney</div></div>
+          <div class="stat"><div class="num">16</div><div class="cap" data-i18n="about.stat2">people in the team</div></div>
+          <div class="stat"><div class="num">6</div><div class="cap" data-i18n="about.stat3">days a week</div></div>
         </div>
       </div>
       <div class="about-media">
@@ -85,10 +88,10 @@
   <section id="services" class="sect sect-blue">
     <div class="wrap">
       <div class="sect-head">
-        <span class="label">• Services</span>
+        <span class="label" data-i18n="services.label">• Services</span>
         <div style="flex:1 1 640px;min-width:0;display:flex;flex-direction:column;gap:16px">
-          <h2 class="h-xl">Everything Your Smile Needs,<br><span class="serif" style="color:var(--teal-safe)">Under One Roof</span></h2>
-          <p style="margin:0;max-width:440px;font-size:15px;color:var(--ink-80)">From a routine check-up to implants and facial aesthetics — planned with you, priced clearly, done in one place.</p>
+          <h2 class="h-xl" data-i18n-html="headings.services">Everything Your Smile Needs,<br><span class="serif" style="color:var(--teal-safe)">Under One Roof</span></h2>
+          <p style="margin:0;max-width:440px;font-size:15px;color:var(--ink-80)" data-i18n="services.intro">From a routine check-up to implants and facial aesthetics, planned with you, priced clearly, done in one place.</p>
         </div>
       </div>
       <div class="cards" id="services-grid"></div>
@@ -99,8 +102,8 @@
   <section id="why" class="sect">
     <div class="wrap">
       <div class="sect-head">
-        <span class="label">• Why us</span>
-        <h2 class="h-xl" style="flex:1 1 640px;min-width:0"><span class="serif" style="color:var(--sky-safe)">Modern Dentistry,</span><br>Without the Wait</h2>
+        <span class="label" data-i18n="why.label">• Why us</span>
+        <h2 class="h-xl" style="flex:1 1 640px;min-width:0" data-i18n-html="headings.why"><span class="serif" style="color:var(--sky-safe)">Modern Dentistry,</span><br>Without the Wait</h2>
       </div>
       <div class="reasons" id="reasons-grid"></div>
     </div>
@@ -111,15 +114,15 @@
     <div class="wrap">
       <div class="team-head">
         <div style="display:flex;flex-direction:column;gap:16px">
-          <span class="label">• Team</span>
-          <h2 class="h-xl">Trained Across Europe,<br><span class="serif" style="color:var(--teal-safe)">Settled in Hackney</span></h2>
+          <span class="label" data-i18n="team.label">• Team</span>
+          <h2 class="h-xl" data-i18n-html="headings.team">Trained Across Europe,<br><span class="serif" style="color:var(--teal-safe)">Settled in Hackney</span></h2>
         </div>
-        <p>Every clinician is registered with the General Dental Council — numbers listed so you can check.</p>
+        <p data-i18n="team.intro">Every clinician is registered with the General Dental Council, with numbers listed so you can check.</p>
       </div>
       <div class="team-grid" id="team-grid"></div>
       <div class="team-group">
-        <figure><img src="../images/hd-l1130292.jpg" alt="CitySmile dental nurses"><figcaption>Our dental nurses</figcaption></figure>
-        <figure><img src="../images/hd-l11301132.jpg" alt="CitySmile nursing team"><figcaption>The chairside team</figcaption></figure>
+        <figure><img src="../images/hd-l1130292.jpg" alt="CitySmile dental nurses"><figcaption data-i18n="team.capNurses">Our dental nurses</figcaption></figure>
+        <figure><img src="../images/hd-l11301132.jpg" alt="CitySmile nursing team"><figcaption data-i18n="team.capTeam">The chairside team</figcaption></figure>
       </div>
     </div>
   </section>
@@ -128,16 +131,16 @@
   <section id="book" class="sect book">
     <div class="wrap">
       <div class="book-copy">
-        <span class="label">• Book online</span>
-        <h2 class="h-xl" style="font-size:clamp(36px,5.5vw,64px)">Pick a Time.<br><span class="serif" style="color:var(--pink)">Keep It Secured.</span></h2>
-        <p>See real availability any time of day. A £[DEPOSIT] deposit holds your slot — it comes off your bill and is refundable up to 48 hours before.</p>
+        <span class="label" data-i18n="book.label">• Book online</span>
+        <h2 class="h-xl" style="font-size:clamp(36px,5.5vw,64px)" data-i18n-html="headings.book">Pick a Time.<br><span class="serif" style="color:var(--pink)">Keep It Secured.</span></h2>
+        <p data-i18n="book.intro">See real availability any time of day. A £[DEPOSIT] deposit holds your slot, comes off your bill and is refundable up to 48 hours before.</p>
       </div>
       <div class="widget">
-        <div class="widget-top"><span class="t">New patient check-up</span><span class="d">45 min</span></div>
+        <div class="widget-top"><span class="t" data-i18n="book.widgetTitle">New patient check-up</span><span class="d" data-i18n="book.widgetDur">45 min</span></div>
         <div class="days" id="book-days"></div>
         <div class="slots" id="book-slots"></div>
         <a id="reserve-btn" href="booking.html" class="btn btn-pink" style="padding:16px">( Reserve )</a>
-        <span class="pay-note">Card, Apple Pay &amp; Google Pay · Secure payments by Stripe</span>
+        <span class="pay-note" data-i18n="book.payNote">Card, Apple Pay &amp; Google Pay · Secure payments by Stripe</span>
       </div>
     </div>
   </section>
@@ -151,18 +154,27 @@
         <a class="pin" href="https://www.google.com/maps/search/?api=1&query=CitySmile+37-39+Mare+Street+London+E8+4RP" target="_blank" rel="noopener">Open in Google Maps ↗</a>
       </div>
       <div class="visit-card">
-        <span class="label">• Visit</span>
-        <h2 class="h-lg">37–39 Mare Street, <span class="serif" style="color:var(--teal-safe)">Hackney</span></h2>
+        <span class="label" data-i18n="visit.label">• Visit</span>
+        <h2 class="h-lg" data-i18n-html="headings.visit">37–39 Mare Street, <span class="serif" style="color:var(--teal-safe)">Hackney</span></h2>
+        <p class="visit-blurb" data-i18n="visit.blurb">On Mare Street in Hackney, East London, five minutes from the busy City of London. Make a lunchtime appointment or a time that suits you.</p>
         <div class="hours">
-          <span class="k">Monday</span><span>09:30 – 17:30</span>
-          <span class="k">Tuesday</span><span>09:30 – 18:00</span>
-          <span class="k">Wednesday</span><span class="bold">08:00 – 19:00</span>
-          <span class="k">Thursday</span><span>09:30 – 17:30</span>
-          <span class="k">Friday</span><span>09:30 – 17:30</span>
-          <span class="k">Saturday</span><span class="bold">09:30 – 15:00</span>
+          <span class="k" data-i18n="days.mon">Monday</span><span>09:30 – 17:30</span>
+          <span class="k" data-i18n="days.tue">Tuesday</span><span>09:30 – 18:00</span>
+          <span class="k" data-i18n="days.wed">Wednesday</span><span class="bold">08:00 – 19:00</span>
+          <span class="k" data-i18n="days.thu">Thursday</span><span>09:30 – 17:30</span>
+          <span class="k" data-i18n="days.fri">Friday</span><span>09:30 – 17:30</span>
+          <span class="k" data-i18n="days.sat">Saturday</span><span class="bold">09:30 – 15:00</span>
         </div>
-        <div class="transport"><strong>Overground:</strong> London Fields, Cambridge Heath, Hoxton, Haggerston<br><strong>Tube:</strong> Bethnal Green · <strong>Bus:</strong> 26, 48, 55, 106, 254, 388</div>
-        <a href="tel:+442077394275" class="btn btn-primary" style="align-self:flex-start">( 020 7739 4275 )</a>
+        <div class="transport-list">
+          <div class="tr"><span class="tr-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="12" rx="2.5"/><path d="M4 11h16"/><path d="M7 16v2M17 16v2"/><circle cx="8" cy="13.5" r=".6" fill="currentColor" stroke="none"/><circle cx="16" cy="13.5" r=".6" fill="currentColor" stroke="none"/></svg></span><span class="txt"><b data-i18n="visit.bus">Bus</b><span class="det">26, 48, 55, 106, 254, 388</span></span></div>
+          <div class="tr"><span class="tr-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 11h12"/><circle cx="9" cy="13.5" r=".7" fill="currentColor" stroke="none"/><circle cx="15" cy="13.5" r=".7" fill="currentColor" stroke="none"/><path d="M8.5 19l-2 2M15.5 19l2 2"/></svg></span><span class="txt"><b data-i18n="visit.rail">Rail / Overground</b><span class="det">London Fields, Cambridge Heath, Hoxton, Haggerston</span></span></div>
+          <div class="tr"><span class="tr-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M4.5 12h15"/></svg></span><span class="txt"><b data-i18n="visit.tube">Tube</b><span class="det">Bethnal Green</span></span></div>
+        </div>
+        <div class="visit-actions">
+          <a href="booking.html" class="btn btn-pink" data-i18n="visit.makeAppt">( Make an Appointment )</a>
+          <a href="tel:+442077394275" class="btn btn-ghost" data-i18n="visit.phone">( 020 7739 4275 )</a>
+        </div>
+        <p class="visit-note" data-i18n="visit.noteBook">Book online, or call us and we’ll find a time that suits you.</p>
       </div>
     </div>
   </section>
@@ -173,9 +185,12 @@
       <div class="cta-box">
         <img src="../images/site-home-1.jpg" alt="">
         <div class="cta-copy">
-          <h2>Book in a Minute.<br><span class="serif" style="color:var(--pink)">Smile for Years.</span></h2>
-          <p>Early Wednesdays, Saturdays and lunchtime slots for busy City schedules.</p>
-          <a href="booking.html" class="btn btn-pink" style="align-self:flex-start">( Book an Appointment )</a>
+          <h2 data-i18n-html="headings.ctaBook">Book in a Minute.<br><span class="serif" style="color:var(--pink)">Smile for Years.</span></h2>
+          <p data-i18n="cta.bookIntro">Early Wednesdays, Saturdays and lunchtime slots for busy City schedules.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px">
+            <a href="booking.html" class="btn btn-pink" data-i18n="cta.bookAppt">( Book an Appointment )</a>
+            <a href="contact.html" class="btn btn-ghost" data-i18n="cta.contactUs">( Contact Us )</a>
+          </div>
         </div>
       </div>
     </div>
@@ -186,25 +201,26 @@
     <div class="wrap">
       <div class="foot-brand">
         <span class="foot-logo"><b>CITY</b>SMILE</span>
-        <small>Dental practice in Hackney since 1999.</small>
+        <small data-i18n="foot.tagline">Dental practice in Hackney since 1999.</small>
       </div>
       <div class="foot-col">
-        <span class="label">Menu</span>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#team">Team</a>
-        <a href="booking.html">Book online</a>
+        <span class="label" data-i18n="foot.menu">Menu</span>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#team" data-i18n="nav.team">Team</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="booking.html" data-i18n="nav.bookOnline">Book online</a>
       </div>
       <div class="foot-col">
-        <span class="label">Contact</span>
+        <span class="label" data-i18n="foot.contact">Contact</span>
         <span>37–39 Mare Street<br>Hackney, London E8 4RP</span>
         <a href="tel:+442077394275">020 7739 4275</a>
       </div>
     </div>
     <div class="foot-bottom">
       <div class="wrap">
-        <span>All clinicians registered with the General Dental Council.</span>
-        <span>Privacy · Cookies · Complaints policy</span>
+        <span data-i18n="foot.gdc">All clinicians registered with the General Dental Council.</span>
+        <span data-i18n="foot.legal">Privacy · Cookies · Complaints policy</span>
       </div>
     </div>
   </footer>
@@ -212,9 +228,10 @@
   <!-- Sticky mobile book bar -->
   <div class="mobilebar">
     <a href="tel:+442077394275" class="call" aria-label="Call CitySmile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2B3990" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
-    <a id="bookbar-btn" href="booking.html" class="book">( Book an Appointment )</a>
+    <a id="bookbar-btn" href="booking.html" class="book" data-i18n="nav.bookCta">( Book an Appointment )</a>
   </div>
 
+  <script src="../assets/i18n.js"></script>
   <script src="../assets/app.js"></script>
 </body>
 </html>

@@ -25,20 +25,40 @@ The root [`index.html`](index.html) is a chooser that links to both.
 index.html            Chooser landing
 with-booking/
   index.html          Homepage (with "Book online" section + sticky mobile book bar)
-  booking.html        Checkout: appointment summary + details + payment → confirmation
+  booking.html        Checkout: appointment summary + details + payment, then confirmation
+  service.html        Per-service explainer (?s=01..09), e.g. service.html?s=03
+  contact.html        Contact form (name, email, phone, message)
 no-booking/
   index.html          Homepage (call-to-book only)
+  service.html        Per-service explainer (?s=01..09)
+  contact.html        Contact form
 assets/
   styles.css          Shared stylesheet (brand tokens, responsive layout)
-  app.js              Shared script: renders services/team/why-us, nav, booking widget, checkout
-images/               Photos + map snapshot
+  app.js              Shared script: renders services/team/why-us, service pages,
+                      nav, booking widget, checkout and contact form
+images/               Photos (hero, 9 service images) + map snapshot
 .nojekyll             Serve files as-is on GitHub Pages
 ```
+
+Each of the 9 service cards links to `service.html?s=NN`, a mini page explaining the
+treatment (what it is, what to expect, related treatments). The copy lives in
+`SERVICE_DETAILS` in `assets/app.js`.
 
 ## Notes on the booking version
 
 - The checkout is a **front-end demo** — clicking *Pay & Confirm* shows the "You're booked in" screen but **takes no real payment**. A live deposit needs a small backend (e.g. a Stripe Checkout session or Payment Intent created server-side); card details must never be handled by static pages.
-- The date/time slots are **dummy data** in `assets/app.js` — wire them to the clinic's real diary for production.
+- The date/time slots are **dummy data** in `assets/app.js`; wire them to the clinic's real diary for production.
+- The **contact form** (`contact.html`) confirms on screen but does not deliver messages yet. To receive them for free, point the form at a handler such as [Formspree](https://formspree.io) (set the form's `action` and `method`) or Web3Forms, or wire it to the clinic's email.
+
+## Languages
+
+The site is fully multilingual in **English, German, French, Greek and Russian**. Flags
+in the top-right switch the language on every page; the choice is remembered (localStorage)
+and applied across the homepage, service pages, booking and contact. All copy lives in
+`assets/styles.css`'s sibling `assets/i18n.js` (one dictionary per language); `assets/app.js`
+fills every `[data-i18n]` / `[data-i18n-html]` / `[data-i18n-ph]` element and renders the
+data-driven sections in the active language. Flag icons come from the `flag-icons` CDN.
+Team names and GDC numbers are the same in every language.
 
 ## Placeholders to supply before launch
 

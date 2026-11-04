@@ -3,15 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CitySmile — Book &amp; pay deposit</title>
+<title>CitySmile · Book &amp; pay deposit</title>
 <meta name="description" content="Confirm your CitySmile appointment and secure it with a refundable deposit.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/7.2.3/css/flag-icons.min.css">
 <link rel="stylesheet" href="../assets/styles.css">
 <style>
   body.checkout-bg{background:#DCF2FB}
-  .checkout{max-width:960px;margin:0 auto;padding:32px 24px;display:flex;gap:24px;flex-wrap:wrap;align-items:stretch}
+  .co-bar{max-width:960px;margin:0 auto;padding:12px 24px 0;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .co-bar .demo-note{margin:0;font-size:13px;color:var(--ink-70)}
+  .checkout{max-width:960px;margin:0 auto;padding:16px 24px 32px;display:flex;gap:24px;flex-wrap:wrap;align-items:stretch}
   .co-summary{flex:1 1 360px;min-width:0;background:var(--navy);color:#fff;border-radius:14px;padding:32px;display:flex;flex-direction:column;gap:20px}
   .co-summary a.back{color:rgba(255,255,255,.85);text-decoration:none;font-size:15px}
   .co-summary h1{margin:0;font-weight:500;font-size:38px;letter-spacing:-.03em;line-height:1.05}
@@ -39,63 +42,66 @@
   .panel-done .check{width:88px;height:88px;border-radius:999px;background:var(--mint-tint);display:flex;align-items:center;justify-content:center}
   .panel-done h1{margin:0;font-weight:500;font-size:44px;letter-spacing:-.03em}
   .panel-done p{margin:0;font-size:18px;line-height:1.5;color:var(--ink-80);max-width:460px}
-  .demo-note{max-width:960px;margin:0 auto 8px;padding:12px 24px 0;font-size:13px;color:var(--ink-70)}
 </style>
 </head>
 <body class="checkout-bg" data-img-base="../images">
 
-  <p class="demo-note">Demo checkout — no real payment is taken. A live site needs a Stripe backend (see README).</p>
+  <div class="co-bar">
+    <p class="demo-note" data-i18n="bk.demo">Demo checkout. No real payment is taken. A live site needs a Stripe backend (see README).</p>
+    <div class="lang-switch" aria-label="Language"></div>
+  </div>
 
   <div class="checkout" id="checkout">
     <!-- Appointment summary -->
-    <aside class="co-summary" id="panel-form-summary">
-      <a href="index.html" class="back">← Back to CitySmile</a>
-      <h1>Your appointment</h1>
+    <aside class="co-summary">
+      <a href="index.html" class="back" data-i18n="bk.back">← Back to CitySmile</a>
+      <h1 data-i18n="bk.title">Your appointment</h1>
       <div class="co-receipt">
-        <div class="row"><span>Treatment</span><span>New patient check-up</span></div>
-        <div class="row"><span>When</span><span id="sum-when">Wed 4 Nov · 09:15</span></div>
-        <div class="row"><span>Where</span><span>37–39 Mare Street, E8 4RP</span></div>
+        <div class="row"><span data-i18n="bk.treatment">Treatment</span><span data-i18n="book.widgetTitle">New patient check-up</span></div>
+        <div class="row"><span data-i18n="bk.when">When</span><span id="sum-when">Wed 4 Nov · 09:15</span></div>
+        <div class="row"><span data-i18n="bk.where">Where</span><span>37–39 Mare Street, E8 4RP</span></div>
       </div>
       <div class="co-perks">
-        <span>✓ Deposit is taken off your final bill</span>
-        <span>✓ Free cancellation up to 48 hours before</span>
-        <span>✓ Confirmation by email and SMS reminder</span>
+        <span data-i18n="bk.perk1">✓ Deposit is taken off your final bill</span>
+        <span data-i18n="bk.perk2">✓ Free cancellation up to 48 hours before</span>
+        <span data-i18n="bk.perk3">✓ Confirmation by email and SMS reminder</span>
       </div>
-      <div class="co-total"><span style="font-size:16px;color:rgba(255,255,255,.8)">Deposit due today</span><span class="big">£[DEPOSIT]</span></div>
+      <div class="co-total"><span style="font-size:16px;color:rgba(255,255,255,.8)" data-i18n="bk.depositDue">Deposit due today</span><span class="big">£[DEPOSIT]</span></div>
     </aside>
 
     <!-- Details + payment -->
     <form class="co-form" id="checkout-form">
       <div id="panel-form" style="display:flex;flex-direction:column;gap:16px">
-        <h2>Your details</h2>
-        <label>Full name<input type="text" name="name" placeholder="Jane Smith" required></label>
+        <h2 data-i18n="bk.details">Your details</h2>
+        <label><span data-i18n="ct.name">Full name</span><input type="text" name="name" placeholder="Jane Smith" required></label>
         <div class="co-grid2">
-          <label>Email<input type="email" name="email" placeholder="jane@email.com" required></label>
-          <label>Mobile<input type="tel" name="phone" placeholder="07…" required></label>
+          <label><span data-i18n="ct.email">Email</span><input type="email" name="email" placeholder="jane@email.com" required></label>
+          <label><span data-i18n="ct.phone">Mobile</span><input type="tel" name="phone" placeholder="07…" required></label>
         </div>
-        <h2 style="margin-top:8px">Payment</h2>
+        <h2 style="margin-top:8px" data-i18n="bk.payment">Payment</h2>
         <div class="pay-methods">
           <button type="button" class="pay-method on">Card</button>
           <button type="button" class="pay-method">Apple Pay</button>
           <button type="button" class="pay-method">Google Pay</button>
         </div>
-        <div class="stripe-field">[ Secure Stripe payment field — card details never touch the clinic’s server ]</div>
-        <button type="submit" class="pay-btn">( Pay £[DEPOSIT] &amp; Confirm )</button>
-        <span class="co-fine">Encrypted checkout · Payments processed by Stripe</span>
+        <div class="stripe-field" data-i18n="bk.stripe">[ Secure Stripe payment field, card details never touch the clinic’s server ]</div>
+        <button type="submit" class="pay-btn" data-i18n="bk.pay">( Pay £[DEPOSIT] &amp; Confirm )</button>
+        <span class="co-fine" data-i18n="bk.enc">Encrypted checkout · Payments processed by Stripe</span>
       </div>
     </form>
 
     <!-- Confirmation -->
     <div class="panel-done" id="panel-done">
       <span class="check"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#2B3990" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>
-      <h1>You’re booked in.</h1>
-      <p><span id="done-when">Wednesday 4 November at 09:15</span> with CitySmile. We’ve sent the details to your email and will text you the day before.</p>
+      <h1 data-i18n="bk.doneTitle">You’re booked in.</h1>
+      <p><span id="done-when">Wednesday 4 November at 09:15</span> <span data-i18n="bk.doneBody">with CitySmile. We’ve sent the details to your email and will text you the day before.</span></p>
       <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
-        <a href="index.html" class="btn btn-primary" style="border-radius:999px">Back to home</a>
+        <a href="index.html" class="btn btn-primary" style="border-radius:999px" data-i18n="ct.backHome">Back to home</a>
       </div>
     </div>
   </div>
 
+  <script src="../assets/i18n.js"></script>
   <script src="../assets/app.js"></script>
 </body>
 </html>
