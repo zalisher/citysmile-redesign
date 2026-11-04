@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CitySmile — redesign preview</title>
+<meta name="description" content="Two versions of the CitySmile dental practice website redesign: with online booking, and without.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  body{min-height:100vh;display:flex;flex-direction:column}
+  .chooser{flex:1;max-width:1000px;margin:0 auto;padding:64px 24px;display:flex;flex-direction:column;gap:40px}
+  .chooser-head{display:flex;flex-direction:column;gap:14px}
+  .chooser-head .logo{font-size:28px}
+  .chooser-head h1{margin:0;font-weight:500;font-size:clamp(36px,6vw,60px);line-height:1;letter-spacing:-.035em}
+  .chooser-head p{margin:0;max-width:560px;font-size:17px;color:var(--ink-80)}
+  .options{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .option{display:flex;flex-direction:column;gap:16px;padding:28px;border-radius:var(--radius);
+    border:1px solid var(--border);background:var(--bg-blue-lite);text-decoration:none;color:var(--navy);
+    transition:box-shadow .15s ease,transform .08s ease}
+  .option:hover{color:var(--navy);box-shadow:var(--shadow)}
+  .option.pink{background:var(--pink-tint)}
+  .option .tag{font-size:13px;color:var(--ink-60)}
+  .option h2{margin:0;font-weight:500;font-size:30px;letter-spacing:-.025em}
+  .option p{margin:0;font-size:15px;line-height:1.55;color:var(--ink-80);flex:1}
+  .option .go{align-self:flex-start;font-weight:600;color:var(--pink-btn)}
+  .chooser-foot{font-size:14px;color:var(--ink-65)}
+</style>
+</head>
+<body>
+  <div class="chooser">
+    <div class="chooser-head">
+      <span class="logo"><b style="color:var(--sky)">CITY</b>SMILE</span>
+      <h1>Website redesign <span class="serif" style="color:var(--pink)">preview</span></h1>
+      <p>Two versions of the same redesign for CitySmile Dental Practice, Hackney. Pick the one that matches how the practice wants to take appointments.</p>
+    </div>
+    <div class="options">
+      <a class="option pink" href="with-booking/index.html">
+        <span class="tag">Version A</span>
+        <h2 class="serif" style="font-style:normal">With online booking</h2>
+        <p>Full site plus a live date &amp; time picker and a checkout page that takes a refundable deposit (Stripe demo). For a practice that wants patients to self-book 24/7.</p>
+        <span class="go">View version A →</span>
+      </a>
+      <a class="option" href="no-booking/index.html">
+        <span class="tag">Version B</span>
+        <h2 class="serif" style="font-style:normal">Without booking</h2>
+        <p>The same site as a brochure — every call to action rings the practice on 020 7739 4275. No booking widget, no payment. Simplest to launch.</p>
+        <span class="go">View version B →</span>
+      </a>
+    </div>
+    <p class="chooser-foot">Rebuilt as fast, responsive, HTTPS-ready static pages from the design spec. Prices, deposit amount and live availability are placeholders to be supplied by the clinic.</p>
+  </div>
+</body>
+</html>
